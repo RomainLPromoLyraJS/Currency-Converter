@@ -15,7 +15,7 @@ import './app.scss';
 const App = () => (
   <div className="app">
     <Header />
-    <AllCurrencies />
+    <AllCurrencies allcurrencies={currencies.allcurrencies} />
     <Footer />
   </div>
 );
