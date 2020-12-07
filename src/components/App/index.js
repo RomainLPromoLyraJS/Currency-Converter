@@ -1,15 +1,22 @@
 // == Import npm
 import React from 'react';
 
-// == Import
-import reactLogo from './react-logo.svg';
-import './styles.css';
+import Header from 'src/components/Header';
+import AllCurrencies from 'src/components/AllCurrencies';
+import Footer from 'src/components/Footer';
+
+// on importe nos données statiques depuis recipe
+import currencies from 'src/data/currencies';
+
+// on importe notre SCSS du composant Appß
+import './app.scss';
 
 // == Composant
 const App = () => (
   <div className="app">
-    <img src={reactLogo} alt="react logo" />
-    <h1>Composant : App</h1>
+    <Header />
+    <AllCurrencies />
+    <Footer />
   </div>
 );
 
