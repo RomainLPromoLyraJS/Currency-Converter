@@ -1,0 +1,24 @@
+.header {
+  padding: 2em;
+  background-color: #bb5432;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  
+  
+&__title {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 700;
+}
+
+&__subtitle {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 300;
+  
+}
+
+}
+
+

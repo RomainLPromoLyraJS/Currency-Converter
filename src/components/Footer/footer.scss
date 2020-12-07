@@ -1,0 +1,22 @@
+.footer {
+  padding: 2em;
+  background-color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  font-family: 'Spartan', sans-serif;
+
+  &__title {
+    font-size: 2em;
+    color: #bb5432;
+    font-weight: 700;
+  }
+  
+  &__subtitle {
+    color: #bb5432;
+    font-size: 1.5em;
+    font-weight: 300;
+    
+}
+
+}
