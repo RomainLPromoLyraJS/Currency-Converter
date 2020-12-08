@@ -12,25 +12,60 @@ import currencies from 'src/data/currencies';
 import './app.scss';
 
 // == Composant
-const App = () => {
-  const open = true;
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-  return (
-    <div className="app">
-      <Header baseAmount={1} />
-      <button
-        type="button"
-        onClick={() => {
+    this.state = {
+      open: true,
+      baseAmount: 50,
+      currentCurrency: 'Swiss Franc',
 
-        }}
-      >
-        ouvrir la liste des devises
-      </button>
-      {open && <AllCurrencies allcurrencies={currencies} />}
-      <Footer value={1.09} currency="United States Dollar" />
-    </div>
-  );
-};
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    console.log('this.state après modification :', this.state);
+
+    const { open } = this.state;
+
+    console.log('juste apres setState');
+
+    this.setState({ open: !open });
+
+    console.log('juste apres setState');
+  }
+
+  computeResult() {
+    const currency = currencies.find((curr) => curr.name === this.state.currentCurrency);
+
+    const result = this.state.baseAmount * currency.rate;
+    return result;
+  }
+
+  // il a une méthode render, qui renvoie le JSX
+  render() {
+    console.log('Render du composant App');
+
+    return (
+      <div className="app">
+        <Header baseAmount={this.state.baseAmount} />
+        {/* notre tout premier event handler en react ! */}
+        <button
+          type="button"
+          className="app__toggler"
+          onClick={this.handleClick}
+        >
+          ouvrir la liste des devises
+        </button>
+        {this.state.open && <AllCurrencies allcurrencies={currencies} />}
+        <Footer value={this.computeResult()} currency={this.state.currentCurrency} />
+      </div>
+    );
+  }
+}
 
 // == Export
 export default App;

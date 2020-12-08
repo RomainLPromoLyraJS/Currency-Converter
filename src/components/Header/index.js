@@ -10,11 +10,11 @@ import './header.scss';
 // délimitant son corps
 // renverra sa première instruction
 // attention, en JSX, class devient className
-const Header = () => (
+const Header = ({ baseAmount }) => (
   <header className="header">
     <div className="header__content">
       <h1 className="header__title">Converter</h1>
-      <h2 className="header__subtitle">1 euro</h2>
+      <h2 className="header__subtitle">{baseAmount} euros</h2>
     </div>
   </header>
 );
