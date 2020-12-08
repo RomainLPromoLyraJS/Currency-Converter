@@ -10,12 +10,12 @@ import './allcurrencies.scss';
 // délimitant son corps
 // renverra sa première instruction
 // attention, en JSX, class devient className
-const AllCurrencies = ({ allcurrencies }) => (
+const AllCurrencies = ({ allcurrencies, onClick }) => (
   <div className="all-currencies">
     <h3 className="all-currencies__title">Currencies</h3>
     <ul>
       {allcurrencies.map(({ name, rate }) => (
-        <li className="all-currencies__list" key={rate}>{name}</li>
+        <li onClick={onClick} className="all-currencies__list" key={rate}>{name}</li>
       ))}
     </ul>
   </div>

@@ -10,11 +10,11 @@ import './footer.scss';
 // délimitant son corps
 // renverra sa première instruction
 // attention, en JSX, class devient className
-const Footer = ({ value, currentCurrency }) => (
+const Footer = ({ value, currency }) => (
   <footer className="footer">
     <div className="footer__content">
       <h1 className="footer__title">{value}</h1>
-      <h2 className="footer__subtitle">{currentCurrency}</h2>
+      <h2 className="footer__subtitle">{currency}</h2>
     </div>
   </footer>
 );

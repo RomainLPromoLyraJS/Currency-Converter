@@ -18,8 +18,8 @@ class App extends React.Component {
 
     this.state = {
       open: true,
-      baseAmount: 50,
-      currentCurrency: 'Swiss Franc',
+      baseAmount: 100,
+      currentCurrency: 'Australian Dollar',
 
     };
 
@@ -36,6 +36,12 @@ class App extends React.Component {
     this.setState({ open: !open });
 
     console.log('juste apres setState');
+  }
+
+  handleCurrencies(event) {
+    console.log('voici mon event : ', event);
+
+    console.log('mon event.target', event.target);
   }
 
   computeResult() {
@@ -60,7 +66,7 @@ class App extends React.Component {
         >
           ouvrir la liste des devises
         </button>
-        {this.state.open && <AllCurrencies allcurrencies={currencies} />}
+        {this.state.open && <AllCurrencies onClick={this.handleCurrencies} allcurrencies={currencies} />}
         <Footer value={this.computeResult()} currency={this.state.currentCurrency} />
       </div>
     );
