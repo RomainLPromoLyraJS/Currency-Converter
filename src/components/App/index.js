@@ -12,13 +12,25 @@ import currencies from 'src/data/currencies';
 import './app.scss';
 
 // == Composant
-const App = () => (
-  <div className="app">
-    <Header />
-    <AllCurrencies allcurrencies={currencies} />
-    <Footer />
-  </div>
-);
+const App = () => {
+  const open = true;
+
+  return (
+    <div className="app">
+      <Header baseAmount={1} />
+      <button
+        type="button"
+        onClick={() => {
+
+        }}
+      >
+        ouvrir la liste des devises
+      </button>
+      {open && <AllCurrencies allcurrencies={currencies} />}
+      <Footer value={1.09} currency="United States Dollar" />
+    </div>
+  );
+};
 
 // == Export
 export default App;
