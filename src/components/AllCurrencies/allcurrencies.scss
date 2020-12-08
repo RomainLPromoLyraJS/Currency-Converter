@@ -1,26 +1,30 @@
 @use 'src/styles/vars';
 
 .all-currencies {
-  
+  max-height: 400px;
+  overflow: auto;
  &__title {
   padding: 2em 1em 1em 1em ;
    background-color: vars.$light;
    border-bottom: 1px solid vars.$primary;
    font-weight: 700;
    color: vars.$primary;
+   overflow: auto;
 } 
 
-&__subtitle {
+&__list {
   padding: 1em;
   background-color: vars.$light;
   border-bottom: 1px solid vars.$primary;
   font-weight: 500;
   color: vars.$primary;
+  
 }
 
-&__subtitle:hover {
+&__list:hover {
   background-color: vars.$alternate;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.8s ease-in-out;
+  cursor: pointer;
 }
 
 }

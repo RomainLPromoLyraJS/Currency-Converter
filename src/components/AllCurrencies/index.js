@@ -13,9 +13,9 @@ import './allcurrencies.scss';
 const AllCurrencies = ({ allcurrencies }) => (
   <div className="all-currencies">
     <h3 className="all-currencies__title">Currencies</h3>
-    <ul className="all-currencies__list">
+    <ul>
       {allcurrencies.map(({ name, rate }) => (
-        <li key={rate}>{name}</li>
+        <li className="all-currencies__list" key={rate}>{name}</li>
       ))}
     </ul>
   </div>
