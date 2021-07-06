@@ -18,7 +18,7 @@ class App extends React.Component {
 
     this.state = {
       open: true,
-      baseAmount: 100,
+      baseAmount: 1,
       currentCurrency: 'Swiss Franc',
 
     };

@@ -1,13 +1,31 @@
-
-    @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap');
-		
+@use '../../styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300;500;700&display=swap');
+   
 
 .app {
   width: 600px;
   margin: 0 auto;
   padding: 1em;
-  background-color: #f1c5b6;
+  background-color: vars.$primary;
   font-family: 'Spartan', sans-serif;
+
+  &__toggler {
+    border: 1px solid vars.$primary;
+    border-bottom: 2px solid vars.$primary;
+    border-left: none;
+    background-color: vars.$light;
+    color: vars.$primary;
+    font-size: 1.3em;
+    font-style: italic;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      background-color: vars.$primary;
+      color: vars.$light;
+      border: 2px solid vars.$light;
+    }
+  }
 }
 
 

@@ -14,7 +14,7 @@ const Header = ({ baseAmount }) => (
   <header className="header">
     <div className="header__content">
       <h1 className="header__title">Converter</h1>
-      <h2 className="header__subtitle">{baseAmount} euros</h2>
+      <h2 className="header__subtitle">{baseAmount} euro</h2>
     </div>
   </header>
 );
